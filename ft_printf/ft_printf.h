@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 18:51:57 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/19 18:09:15 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/22 22:12:46 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		function(void *p, char flag);
 int		numconversion(va_list ap, char flag);
 int		print_ptr_addr(va_list ap);
 int		ft_pputchar_fd(char c, int fd);
+void	ft_pputstr_fd(char *s, int fd);
 int		wint(int n, int base, char *base_str);
 int		wstr(va_list ap);
 int		wuint(unsigned int n, int base, char *base_str);

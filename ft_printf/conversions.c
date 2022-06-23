@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 18:52:45 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/19 18:09:42 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/22 22:12:03 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	*ft_uitoa(unsigned int n)
 	return (numbr1);
 }
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_pputstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
@@ -95,7 +95,7 @@ int	wint(int n, int base, char *base_str)
 	ilen = 0;
 	if (n == -2147483648)
 	{
-		ft_putstr_fd("-2147483648", 1);
+		ft_pputstr_fd("-2147483648", 1);
 		return (11);
 	}
 	if (num < 0)

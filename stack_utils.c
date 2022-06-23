@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 16:27:00 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/19 18:17:16 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/23 10:06:45 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	printlist(t_node *head)
 	
 	while (temporary != NULL)
 	{
-		ft_printf("%d - ", temporary->value);
+		ft_printf("(%d) ", temporary->value);
 		temporary = temporary->next;
 	}
 	ft_printf("\n");

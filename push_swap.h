@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/19 18:17:11 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/22 22:57:31 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ t_node		*last_node(t_node *node);
 void		node_add_back(t_node **node, t_node *new);
 t_node		*stack_init(int argc, char **argv);
 void		printlist(t_node *head);
-
+int			not_unique(int argc, char **argv);
+int			not_valid_arguments(int argc, char **argv);
+int			check_input(int argc, char **argv);
 #endif
