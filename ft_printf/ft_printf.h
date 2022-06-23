@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 18:51:57 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/22 22:12:46 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/23 11:19:34 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		dectohex_ptr(unsigned long n, int base, char *base_str);
 int		dectohex(unsigned int n, int base, char *base_str);
 void	*ft_pcalloc(size_t count, size_t size);
 int		ft_flag(const char *fmt, va_list ap);
-char	*ft_pitoa(int n);
+char	*ft_pitoa(long long int n);
 int		ft_printf(const char *fmt, ...);
 char	*ft_uitoa(unsigned int n);
 int		function(void *p, char flag);

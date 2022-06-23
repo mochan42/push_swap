@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/22 23:43:17 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/23 14:26:33 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ int	main(int argc, char **argv)
 	
 	ft_printf("Linked list for stack A copied from input:\n");
 	printlist(head_a);
-	
+
 
 	if (check_input(argc, argv) > 0)
 	{
 		ft_putstr_fd("Error\n", 2);
+		
 	}
 
 

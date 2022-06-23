@@ -6,13 +6,13 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/22 23:45:21 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/23 16:24:22 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	check_for_not_a_digit(char *s)
+int	check_for_not_a_digit(char *s)
 {
 	if (*s && (*s == '-'))
 		s++;
@@ -25,15 +25,42 @@ static int	check_for_not_a_digit(char *s)
 	return (0);
 }
 
-static int	out_of_range_number(char *s)
+int	out_of_range_number(char *s)
 {
-	long long int c;
+	long long int	c;
+	char			*str;
 
-	if (ft_strlen(s) > 11)
-		return (1);
 	c = ft_atoi(s);
-	if (c < -2147483647 || c > 2147483647)
+	str = ft_pitoa(c);
+	if (c < -2147483647 || c > 2147483647 || ft_strlen(str) > 11)
 		return (1);
+	return (0);
+}
+
+int	check_for_duplicate(int argc, char **argv)
+{
+	int	*list_of_numbers;
+	int	i;
+	int	j;
+
+	list_of_numbers = (int *)malloc(sizeof(int) * (argc - 1));
+	if (*list_of_numbers)
+		return (0);
+	i = 0;
+	while (++i < argc - 1)
+		list_of_numbers[i] = ft_atoi(argv[i + 1]);
+	i = 0;
+	while (i++ < argc - 1)
+	{
+		j = 0;
+		while ((j++ < argc - 1) && (j != i))
+		{
+			if (list_of_numbers[i] == list_of_numbers[j])
+				return (1);
+		}
+	}
+	free(list_of_numbers);
+	list_of_numbers = NULL;
 	return (0);
 }
 
@@ -45,15 +72,16 @@ int	check_input(int argc, char **argv)
 	i = 1;
 	if (argc == 1)
 		err = 0;
+	err = 0;
 	while (i < argc)
 	{
-		err = check_for_not_a_digit(argv[i]);
-		if (err > 0)
-			return (err);
-		err = out_of_range_number(argv[i]);
+		err = check_for_not_a_digit(argv[i]) + out_of_range_number(argv[i]);
 		if (err > 0)
 			return (err);
 		i++;
 	}
+	err = err + check_for_duplicate(argc, argv);
+	if (err > 0)
+		return (err);
 	return (err);
 }

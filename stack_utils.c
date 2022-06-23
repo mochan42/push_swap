@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 16:27:00 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/23 10:06:45 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/23 14:39:19 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,9 @@ t_node	*stack_init(int argc, char **argv)
 
 void	printlist(t_node *head)
 {
-	t_node *temporary = head;
-	
+	t_node	*temporary;
+
+	temporary = head;
 	while (temporary != NULL)
 	{
 		ft_printf("(%d) ", temporary->value);

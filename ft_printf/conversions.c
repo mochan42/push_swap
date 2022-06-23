@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 18:52:45 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/22 22:12:03 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/23 11:20:57 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_count(long int n)
 	return (i);
 }
 
-char	*ft_pitoa(int n)
+char	*ft_pitoa(long long int n)
 {
 	int			x;
 	long int	num;
