@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/23 14:39:16 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/23 17:18:27 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,10 @@ int		check_for_not_a_digit(char *s);
 int		check_for_not_a_digit(char *s);
 int		check_for_duplicate(int argc, char **argv);
 int		check_input(int argc, char **argv);
+void	move_sa(t_node **head);
+void	move_ra(t_node **head);
+t_node	*before_last_node(t_node *node);
+void	node_add_front(t_node **node, t_node *new);
+void	move_rra(t_node **head);
 
 #endif

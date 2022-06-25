@@ -26,7 +26,7 @@ END_COLOR	:= \033[0;39m
 # **************************************************************************** #
 # SOURCES
 
-SRCS		:= push_swap.c stack_utils.c input_error_handling.c
+SRCS		:= push_swap.c stack_utils.c input_error_handling.c stack_utils_2.c stack_moves_1.c
 OBJS		:= $(SRCS:.c=.o)
 
 # **************************************************************************** #
