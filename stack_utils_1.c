@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*   stack_utils_1.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 16:27:00 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/23 14:39:19 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/26 22:57:46 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	printlist(t_node *head)
 	temporary = head;
 	while (temporary != NULL)
 	{
-		ft_printf("(%d) ", temporary->value);
+		ft_printf("%d ", temporary->value);
 		temporary = temporary->next;
 	}
 	ft_printf("\n");

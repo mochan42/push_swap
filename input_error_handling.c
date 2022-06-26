@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/23 16:24:22 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/26 17:20:13 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_for_not_a_digit(char *s)
 {
-	if (*s && (*s == '-'))
+	if (*s && (*s == '-' || *s == '+'))
 		s++;
 	while (*s)
 	{
@@ -42,26 +42,26 @@ int	check_for_duplicate(int argc, char **argv)
 	int	*list_of_numbers;
 	int	i;
 	int	j;
+	int	b_duplicate;
 
+	b_duplicate = 0;
 	list_of_numbers = (int *)malloc(sizeof(int) * (argc - 1));
-	if (*list_of_numbers)
-		return (0);
-	i = 0;
+	if (list_of_numbers == NULL)
+		return (1);
+	i = -1;
 	while (++i < argc - 1)
 		list_of_numbers[i] = ft_atoi(argv[i + 1]);
-	i = 0;
-	while (i++ < argc - 1)
+	i = -1;
+	while (++i < argc - 2)
 	{
-		j = 0;
-		while ((j++ < argc - 1) && (j != i))
-		{
+		j = i;
+		while (++j < argc - 1)
 			if (list_of_numbers[i] == list_of_numbers[j])
-				return (1);
-		}
+				b_duplicate = 1;
 	}
 	free(list_of_numbers);
 	list_of_numbers = NULL;
-	return (0);
+	return (b_duplicate);
 }
 
 int	check_input(int argc, char **argv)
@@ -70,7 +70,7 @@ int	check_input(int argc, char **argv)
 	int	i;
 
 	i = 1;
-	if (argc == 1)
+	if (argc == 1 || argc == 2)
 		err = 0;
 	err = 0;
 	while (i < argc)

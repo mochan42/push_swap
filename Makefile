@@ -26,7 +26,13 @@ END_COLOR	:= \033[0;39m
 # **************************************************************************** #
 # SOURCES
 
-SRCS		:= push_swap.c stack_utils.c input_error_handling.c stack_utils_2.c stack_moves_1.c
+SRCS		:=	push_swap.c input_error_handling.c \
+				stack_utils_1.c stack_utils_2.c \
+				moves_single_stack.c moves_both_stacks.c \
+				redirect_2345.c sort_2_elements.c \
+				sort_3_elements_decision.c sort_3_elements_actions.c \
+				sort_4_elements.c \
+
 OBJS		:= $(SRCS:.c=.o)
 
 # **************************************************************************** #
