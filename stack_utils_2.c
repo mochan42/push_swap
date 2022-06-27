@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 17:11:19 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/26 23:02:52 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/27 09:44:08 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	node_add_front(t_node **node, t_node *new)
 
 t_node	*find_min_node(t_node *head)
 {
-	t_node *current;
-	t_node *min_node;
-	int	min;
+	t_node	*current;
+	t_node	*min_node;
+	int		min;
 
 	if (head == NULL)
 		return (NULL);
@@ -52,10 +52,10 @@ t_node	*find_min_node(t_node *head)
 	return (min_node);
 }
 
-int		find_min_value(t_node *head)
+int	find_min_value(t_node *head)
 {
-	t_node *current;
-	int	min;
+	t_node	*current;
+	int		min;
 
 	if (head == NULL)
 		return (0);

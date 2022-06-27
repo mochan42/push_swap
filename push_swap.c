@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/26 23:49:44 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/27 09:29:31 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ int	main(int argc, char **argv)
 	
 	if (argc > 2 && argc <5)
 		redirect_23(argc, &head_a);
-	if (argc > 4 && argc <7)
+	else if (argc > 4 && argc <7)
 		redirect_45(argc, &head_a, &head_b);
 	else
 		ft_printf("Not coded yet\n");
