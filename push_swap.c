@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 11:57:56 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/27 15:22:06 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ int	main(int argc, char **argv)
 {
 	t_node	*head_a;
 	t_node	*head_b;
-	t_node	*head_c;
-	int		minimum;
+	// t_node	*head_c;
+	// int		minimum;
 
 	head_a = stack_init(argc, argv);
 	head_b = NULL;
-	head_c = find_min_node(head_a);
-	minimum = find_min_value(head_a);
+	// head_c = find_min_node(head_a);
+	// minimum = find_min_value(head_a);
 
-	ft_printf("Number of arguments %d\n\n", argc);
+	// ft_printf("Number of arguments %d\n\n", argc);
 	
-	ft_printf("A: ");
-	printlist(head_a);
-	ft_printf("B: ");
-	printlist(head_b);
+	// ft_printf("A: ");
+	// printlist(head_a);
+	// ft_printf("B: ");
+	// printlist(head_b);
 	// ft_printf("minimum of A is : %d\n", minimum);
 	// ft_printf("node C is the minimum of A: ");
 	// printlist(head_c);
@@ -120,11 +120,11 @@ int	main(int argc, char **argv)
 	else
 		ft_printf("Not coded yet\n");
 
-	ft_printf("A: ");
-	printlist(head_a);
-	ft_printf("B: ");
-	printlist(head_b);
-	ft_printf("\n");
+	// ft_printf("A: ");
+	// printlist(head_a);
+	// ft_printf("B: ");
+	// printlist(head_b);
+	// ft_printf("\n");
 	
 	return (0);
 }

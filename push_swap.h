@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 12:05:36 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/27 15:33:18 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	sort_4(t_node **head_1, t_node **head_2);
 
 /* sort_5_elements.c */
 void	sort_5_method_1(t_node **head_1, t_node **head_2);
+void	sort_5_decision(t_node **head_1, t_node **head_2, int n);
 void	sort_5(t_node **head_1, t_node **head_2);
 
 /* stack_utils_1.c */
