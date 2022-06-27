@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 09:29:31 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/27 11:57:56 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,6 @@ int	main(int argc, char **argv)
 	ft_printf("B: ");
 	printlist(head_b);
 	ft_printf("\n");
-
+	
 	return (0);
 }
