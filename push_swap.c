@@ -6,7 +6,7 @@
 /*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/05 09:33:43 by moninechan       ###   ########.fr       */
+/*   Updated: 2022/07/05 14:02:59 by moninechan       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ int	main(int argc, char **argv)
 		redirect_45(argc, &head_a, &head_b);
 	else if (argc > 6)
 		{
-			ft_printf("redirect 6 numbers\n");
+			ft_printf("redirect to sort list with more than 6 numbers\n");
 			radix_sort(&head_a);
 		}
 	ft_printf("A: ");
