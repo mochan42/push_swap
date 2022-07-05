@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 15:22:06 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/05 09:33:43 by moninechan       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ int	main(int argc, char **argv)
 	// head_c = find_min_node(head_a);
 	// minimum = find_min_value(head_a);
 
-	// ft_printf("Number of arguments %d\n\n", argc);
+	ft_printf("Number of arguments %d\n\n", argc);
 	
-	// ft_printf("A: ");
-	// printlist(head_a);
-	// ft_printf("B: ");
-	// printlist(head_b);
+	ft_printf("A: ");
+	printlist(head_a);
+	ft_printf("B: ");
+	printlist(head_b);
 	// ft_printf("minimum of A is : %d\n", minimum);
 	// ft_printf("node C is the minimum of A: ");
 	// printlist(head_c);
@@ -113,18 +113,20 @@ int	main(int argc, char **argv)
 	// printlist(head_b);
 	// ft_printf("\n");
 	
-	if (argc > 2 && argc <5)
+	if (argc > 2 && argc < 5)
 		redirect_23(argc, &head_a);
-	else if (argc > 4 && argc <7)
+	else if (argc > 4 && argc < 7)
 		redirect_45(argc, &head_a, &head_b);
-	else
-		ft_printf("Not coded yet\n");
-
-	// ft_printf("A: ");
-	// printlist(head_a);
-	// ft_printf("B: ");
-	// printlist(head_b);
-	// ft_printf("\n");
+	else if (argc > 6)
+		{
+			ft_printf("redirect 6 numbers\n");
+			radix_sort(&head_a);
+		}
+	ft_printf("A: ");
+	printlist(head_a);
+	ft_printf("B: ");
+	printlist(head_b);
+	ft_printf("\n");
 	
 	return (0);
 }

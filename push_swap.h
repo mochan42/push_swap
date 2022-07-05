@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 15:33:18 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/05 09:37:28 by moninechan       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@
 
 typedef struct s_node
 {
-	struct s_node		*next;
-	int					value;
+	struct s_node	*next;
+	int				value;
+	int				index;
 }	t_node;
 
 /* ########################################################################## */
@@ -76,6 +77,10 @@ void	sort_5_method_1(t_node **head_1, t_node **head_2);
 void	sort_5_decision(t_node **head_1, t_node **head_2, int n);
 void	sort_5(t_node **head_1, t_node **head_2);
 
+/* sort_n_elements_radix.c */
+void	give_index(t_node *head_1);
+void	radix_sort(t_node **head_1);
+
 /* stack_utils_1.c */
 t_node	*last_node(t_node *node);
 void	node_add_back(t_node **node, t_node *new);
@@ -87,5 +92,9 @@ t_node	*before_last_node(t_node *node);
 void	node_add_front(t_node **node, t_node *new);
 int		find_min_value(t_node *head);
 t_node	*find_min_node(t_node *head);
+int		ft_plstsize(t_node *head);
+
+/* stack_utils_3.c */
+void	printlist_index(t_node *head);
 
 #endif

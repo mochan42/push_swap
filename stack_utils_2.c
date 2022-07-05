@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 17:11:19 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 09:44:08 by mochan           ###   ########.fr       */
+/*   Updated: 2022/06/30 16:57:07 by moninechan       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,19 @@ int	find_min_value(t_node *head)
 		current = current->next;
 	}
 	return (min);
+}
+
+int	ft_plstsize(t_node *head)
+{
+	size_t	i;
+	t_node	*tmp;
+
+	tmp = head;
+	i = 0;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		i++;
+	}
+	return (i);
 }
