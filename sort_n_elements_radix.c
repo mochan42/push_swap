@@ -6,7 +6,7 @@
 /*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:07:13 by moninechan        #+#    #+#             */
-/*   Updated: 2022/07/05 14:01:38 by moninechan       ###   ########.fr       */
+/*   Updated: 2022/07/05 14:10:02 by moninechan       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ void	fill_index(t_node *head_1, int *array)
 	}
 }
 
-int		radix_sort(t_node **head_1)
+int	radix_sort(t_node **head_1)
 {
 	int	size;
-	int *array;
-	
+	int	*array;
+
 	size = ft_plstsize(*head_1);
 	array = (int *)malloc(sizeof(int) * size);
 	if (array == NULL)
