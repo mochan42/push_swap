@@ -6,7 +6,7 @@
 /*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/05 14:00:47 by moninechan       ###   ########.fr       */
+/*   Updated: 2022/07/05 15:15:08 by moninechan       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,8 @@ void			sort_5(t_node **head_1, t_node **head_2);
 /* sort_n_elements_radix.c */
 int				*create_index(int *array, int size, t_node *head_1);
 void			fill_index(t_node *head_1, int *array);
-int				radix_sort(t_node **head_1);
+void			radix_sort_method_1(t_node **head_1, t_node **head_2, int n);
+void			radix_sort(t_node **head_1, t_node **head_2);
 
 /* stack_utils_1.c */
 t_node			*last_node(t_node *node);
