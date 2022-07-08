@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/26 17:20:13 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/08 14:19:53 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,8 @@ int	check_input(int argc, char **argv)
 	while (i < argc)
 	{
 		err = check_for_not_a_digit(argv[i]) + out_of_range_number(argv[i]);
-		if (err > 0)
-			return (err);
 		i++;
 	}
 	err = err + check_for_duplicate(argc, argv);
-	if (err > 0)
-		return (err);
 	return (err);
 }
