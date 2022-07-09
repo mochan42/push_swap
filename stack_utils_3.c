@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:30:54 by moninechan        #+#    #+#             */
-/*   Updated: 2022/07/09 20:16:42 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/09 20:27:59 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	free_list(t_node *head)
 {
 	t_node	*tmp;
 
-	while(head != NULL)
+	while (head != NULL)
 	{
 		tmp = head;
 		head = head->next;
