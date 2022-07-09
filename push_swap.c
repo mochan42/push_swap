@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/09 18:02:31 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/09 18:22:43 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int	main(int argc, char **argv)
 		redirect_45(size, &head_a, &head_b);
 	else if (size > 5 && b_sorted != 1 && b_input_nok == 0)
 		radix_sort(&head_a, &head_b);
+	ft_printf("test");
 	return (0);
 }
