@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 16:27:00 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/09 18:06:35 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/09 19:58:54 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,16 @@ t_node	*last_node(t_node *node)
 		return (last_node(node->next));
 }
 
-static t_node	*new_node(int value)
+t_node	*new_node(int value)
 {
 	t_node	*p;
 
 	p = (t_node *)malloc(sizeof(t_node));
-	if (p == NULL)
+	if (!p)
 		return (NULL);
 	p->value = value;
 	p->next = NULL;
+	p->index = 0;
 	return (p);
 }
 

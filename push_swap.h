@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/09 12:17:28 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/09 20:15:04 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void			radix_sort(t_node **head_1, t_node **head_2);
 
 /* stack_utils_1.c */
 t_node			*last_node(t_node *node);
+t_node			*new_node(int value);
 void			node_add_back(t_node **node, t_node *new);
 void			printlist(t_node *head);
 t_node			*stack_init(int argc, char **argv);
@@ -101,5 +102,6 @@ int				ft_plstsize(t_node *head);
 
 /* stack_utils_3.c */
 void			printlist_index(t_node *head);
+void			free_list(t_node *head);
 
 #endif
