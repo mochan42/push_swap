@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/05 15:15:08 by moninechan       ###   ########.fr       */
+/*   Updated: 2022/07/09 12:17:28 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ typedef struct s_node
 
 /* ########################################################################## */
 /* FUNCTIONS */
+
+/* check_if_sorted.c */
+int				check_if_sorted(t_node **head_1);
 
 /* input_error_handling.c */
 int				check_for_duplicate(int argc, char **argv);

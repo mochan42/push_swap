@@ -4,4 +4,6 @@ make -s re
 #echo "Input of push_swap" $ARG
 #./push_swap $ARG | wc -l
 #./push_swap $ARG | ./checker_Mac $ARG
-ARG="2 1 0"; ./push_swap $ARG | ./checker_Mac $ARG
+#ARG="0 1 2 3"; ./push_swap $ARG
+#| ./checker_Mac $ARG
+./push_swap 42

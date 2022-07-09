@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 16:27:00 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/08 14:20:03 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/09 18:06:35 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,23 @@ t_node	*stack_init(int argc, char **argv)
 	int		i;
 	t_node	*head;
 	char	**args;
+	int		k;
 
-	i = 1;
+	i = 0;
 	head = NULL;
+	k = 3;
 	if (argc == 2)
-		args = ft_split(argv[1], ' ');
-	if (argc > 2)
-		args = argv;
-	while (i < argc)
 	{
+		args = ft_split(argv[1], ' ');
+		while (args[i])
+			node_add_back(&head, new_node(ft_atoi(args[i++])));
+	}
+	if (argc > 2)
+	{
+		i = 1;
 		args = argv;
-		node_add_back(&head, new_node(ft_atoi(args[i++])));
+		while (args[i])
+			node_add_back(&head, new_node(ft_atoi(args[i++])));
 	}
 	return (head);
 }

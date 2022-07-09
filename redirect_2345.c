@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 19:58:52 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 09:53:35 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/09 18:01:37 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	redirect_23(int n, t_node **head)
 {
-	if (n == 3)
+	if (n == 2)
 		sort_2(head);
-	if (n == 4)
+	if (n == 3)
 		sort_3(head);
 }
 
 void	redirect_45(int n, t_node **head_1, t_node **head_2)
 {
-	if (n == 5)
+	if (n == 4)
 		sort_4(head_1, head_2);
-	if (n == 6)
+	if (n == 5)
 		sort_5(head_1, head_2);
 }

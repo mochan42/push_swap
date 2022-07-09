@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/08 14:19:53 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/09 13:38:12 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,9 @@ int	check_for_not_a_digit(char *s)
 int	out_of_range_number(char *s)
 {
 	long long int	c;
-	char			*str;
 
 	c = ft_atoi(s);
-	str = ft_pitoa(c);
-	if (c < -2147483647 || c > 2147483647 || ft_strlen(str) > 11)
+	if (c < -2147483647 || c > 2147483647 || ft_strlen(s) > 11)
 		return (1);
 	return (0);
 }
@@ -67,15 +65,19 @@ int	check_for_duplicate(int argc, char **argv)
 int	check_input(int argc, char **argv)
 {
 	int	err;
+	int	err_1;
+	int	err_2;
 	int	i;
 
 	i = 1;
 	if (argc == 1 || argc == 2)
 		err = 0;
 	err = 0;
-	while (i < argc)
+	while (i < argc && argc > 2)
 	{
-		err = check_for_not_a_digit(argv[i]) + out_of_range_number(argv[i]);
+		err_1 = check_for_not_a_digit(argv[i]);
+		err_2 = out_of_range_number(argv[i]);
+		err = err + err_1 + err_2;
 		i++;
 	}
 	err = err + check_for_duplicate(argc, argv);
