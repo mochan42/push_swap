@@ -32,6 +32,7 @@ SRCS		:=	push_swap.c check_if_sorted.c input_error_handling.c \
 				redirect_2345.c sort_2_elements.c \
 				sort_3_elements_decision.c sort_3_elements_actions.c \
 				sort_4_elements.c sort_5_elements.c sort_n_elements_radix.c \
+				free_utils.c \
 
 OBJS		:= $(SRCS:.c=.o)
 

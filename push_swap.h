@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/09 20:15:04 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/10 00:43:29 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ typedef struct s_node
 
 /* check_if_sorted.c */
 int				check_if_sorted(t_node **head_1);
+
+/* free_utils.c */
+void			free_list(t_node *head);
+void			free_args(char **args);
 
 /* input_error_handling.c */
 int				check_for_duplicate(int argc, char **argv);
@@ -102,6 +106,5 @@ int				ft_plstsize(t_node *head);
 
 /* stack_utils_3.c */
 void			printlist_index(t_node *head);
-void			free_list(t_node *head);
 
 #endif

@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utils_3.c                                    :+:      :+:    :+:   */
+/*   free_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 18:30:54 by moninechan        #+#    #+#             */
-/*   Updated: 2022/07/10 00:33:25 by mochan           ###   ########.fr       */
+/*   Created: 2022/07/10 00:32:43 by mochan            #+#    #+#             */
+/*   Updated: 2022/07/10 00:43:36 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	printlist_index(t_node *head)
+void	free_list(t_node *head)
 {
-	t_node	*temporary;
+	t_node	*tmp;
 
-	temporary = head;
-	while (temporary != NULL)
+	while (head != NULL)
 	{
-		ft_printf("%d ", temporary->index);
-		temporary = temporary->next;
+		tmp = head;
+		head = head->next;
+		free(tmp);
 	}
-	ft_printf("\n");
+}
+
+void	free_args(char **args)
+{
+	int	i;
+
+	i = 0;
+	while (args[i])
+		free(args[i++]);
+	free(args);
+	return ;
 }
