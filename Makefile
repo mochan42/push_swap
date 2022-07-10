@@ -46,7 +46,7 @@ $(NAME): $(OBJS)
 	@make -C $(LIB_DIR)
 	@echo "make $(FT_PRINTF_DIR)"
 	@make -C $(FT_PRINTF_DIR)
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT_A) $(LIBFTPRINTF_A)
+	@$(CC) $(CFLAGS) -g -o $(NAME) $(OBJS) $(LIBFT_A) $(LIBFTPRINTF_A)
 	@echo "$(GREEN)$(NAME) compiled :)$(END_COLOR)"
 
 clean:

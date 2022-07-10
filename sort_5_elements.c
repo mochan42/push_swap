@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 09:50:33 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/27 15:37:08 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/10 19:15:26 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,34 +57,3 @@ void	sort_5(t_node **head_1, t_node **head_2)
 	}
 	sort_5_decision(head_1, head_2, i);
 }
-
-// void	sort_5(t_node **head_1, t_node **head_2)
-// {
-// 	t_node	*current;
-// 	int		min;
-// 	int		i;
-// 	int		k;
-
-// 	current = *head_1;
-// 	min = find_min_value(*head_1);
-// 	i = 0;
-// 	k = 0;
-// 	while (current != NULL && current->value != min)
-// 	{
-// 		i++;
-// 		current = current->next;
-// 	}
-// 	if (i == 4)
-// 		move_reverse_rotate_c(head_1, 'a');
-// 	else if (i == 3)
-// 	{
-// 		move_reverse_rotate_c(head_1, 'a');
-// 		move_reverse_rotate_c(head_1, 'a');
-// 	}
-// 	else if (i != 4 && i !=3)
-// 	{
-// 		while (current != NULL && k++ < i)
-// 			move_rotate_c(head_1, 'a');
-// 	}
-// 	sort_5_method_1(head_1, head_2);
-// }
