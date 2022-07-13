@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/10 20:36:34 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/13 21:20:36 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,17 @@ void			free_args(char **args);
 void			free_list(t_node *head);
 
 /* input_error_handling.c */
+int				count_arguments(char **arguments);
 int				check_for_duplicate(int argc, char **argv);
 int				check_for_not_a_digit(char *s);
-int				check_input(int argc, char **argv);
-int				count_arguments(char **arguments);
 int				out_of_range_number(char *s);
+
+/* input_error_handling_2.c */
+int				check_input(int argc, char **argv);
+int				check_input_method_1(char **args);
+int				check_input_method_1_prep_argc(char **args);
+char			**check_input_method_1_prep_argv(char **args);
+int				check_input_method_2(int n, char **args);
 
 /* moves_both_stacks.c */
 void			move_rr(t_node **head_1, t_node **head_2);

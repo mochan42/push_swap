@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/10 20:50:40 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/13 21:18:32 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,40 +75,40 @@ int	count_arguments(char **arguments)
 	return (counter);
 }
 
-int	check_input(int argc, char **argv)
-{
-	int		err;
-	int		err_1;
-	int		err_2;
-	int		i;
-	char	*str;
+// int	check_input(int argc, char **argv)
+// {
+// 	int		err;
+// 	int		err_1;
+// 	int		err_2;
+// 	int		i;
+// 	char	*str;
 
-	i = 1;
-	err = 0;
-	if (argc == 1)
-		return (0);
-	if (argc == 2)
-	{
-		str = ft_strjoin("!placeholder ", argv[1]);
-		argv = ft_split(str, ' ');
-		free(str);
-		argc = count_arguments(argv);
-		while (i < argc)
-		{
-			err_1 = check_for_not_a_digit(argv[i]);
-			err_2 = out_of_range_number(argv[i]);
-			err = err + err_1 + err_2;
-			i++;
-		}
-		free_args(argv);
-	}
-	while (i < argc)
-	{
-		err_1 = check_for_not_a_digit(argv[i]);
-		err_2 = out_of_range_number(argv[i]);
-		err = err + err_1 + err_2;
-		i++;
-	}
-	err = err + check_for_duplicate(argc, argv);
-	return (err);
-}
+// 	i = 1;
+// 	err = 0;
+// 	if (argc == 1)
+// 		return (0);
+// 	if (argc == 2)
+// 	{
+// 		str = ft_strjoin("!placeholder ", argv[1]);
+// 		argv = ft_split(str, ' ');
+// 		free(str);
+// 		argc = count_arguments(argv);
+// 		while (i < argc)
+// 		{
+// 			err_1 = check_for_not_a_digit(argv[i]);
+// 			err_2 = out_of_range_number(argv[i]);
+// 			err = err + err_1 + err_2;
+// 			i++;
+// 		}
+// 		free_args(argv);
+// 	}
+// 	while (i < argc)
+// 	{
+// 		err_1 = check_for_not_a_digit(argv[i]);
+// 		err_2 = out_of_range_number(argv[i]);
+// 		err = err + err_1 + err_2;
+// 		i++;
+// 	}
+// 	err = err + check_for_duplicate(argc, argv);
+// 	return (err);
+// }

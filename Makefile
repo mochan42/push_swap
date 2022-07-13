@@ -26,7 +26,8 @@ END_COLOR	:= \033[0;39m
 # **************************************************************************** #
 # SOURCES
 
-SRCS		:=	push_swap.c check_if_sorted.c input_error_handling.c \
+SRCS		:=	push_swap.c check_if_sorted.c \
+				input_error_handling.c input_error_handling_2.c \
 				stack_utils_1.c stack_utils_2.c stack_utils_3.c \
 				moves_single_stack.c moves_both_stacks.c \
 				redirect_2345.c sort_2_elements.c \
