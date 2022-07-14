@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 22:00:53 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/14 22:32:32 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/14 22:36:40 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_atoi(const char *str)
 long int	ft_atoli(const char *str)
 {
 	long int	res;
-	int				negative;
+	int			negative;
 
 	negative = 1;
 	res = 0;
