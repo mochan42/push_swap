@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/10 19:17:48 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/14 22:27:18 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	main(int argc, char **argv)
 	int		b_input_nok;
 	int		size;
 
-	head_a = stack_init(argc, argv);
-	head_b = NULL;
-	size = ft_plstsize(head_a);
 	b_input_nok = check_input(argc, argv);
 	if (b_input_nok > 0)
 		ft_putstr_fd("Error\n", 1);
+	head_a = stack_init(argc, argv);
+	head_b = NULL;
+	size = ft_plstsize(head_a);
 	b_sorted = check_if_sorted(&head_a);
 	if (b_sorted == 1)
 		b_sorted = 1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mochan <mochan@student.42wolfsburg.de>     +#+  +:+       +#+        */
+/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 22:00:53 by mochan            #+#    #+#             */
-/*   Updated: 2021/09/13 22:02:10 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/14 22:32:32 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,27 @@ int	ft_atoi(const char *str)
 {
 	int	res;
 	int	negative;
+
+	negative = 1;
+	res = 0;
+	while (my_isspace(*str))
+		str++;
+	if (*str == '-')
+	{
+		negative = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+		res = (res * 10) + (*str++ - 48);
+	return (negative * res);
+}
+
+long int	ft_atoli(const char *str)
+{
+	long int	res;
+	int				negative;
 
 	negative = 1;
 	res = 0;

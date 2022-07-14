@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 15:59:42 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/23 11:22:24 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/14 22:31:59 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+long int	ft_atoli(const char *str);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_n_elements_radix.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:07:13 by moninechan        #+#    #+#             */
-/*   Updated: 2022/07/05 15:28:02 by moninechan       ###   ########.fr       */
+/*   Updated: 2022/07/14 22:03:59 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,23 +77,23 @@ static int	get_max_bits(t_node **head_1)
 
 void	radix_sort_method_1(t_node **head_1, t_node **head_2, int n)
 {
-	int	i;
-	int	j;
+	int	bit;
+	int	index;
 
-	i = 0;
-	while (i < get_max_bits(head_1))
+	bit = 0;
+	while (bit < get_max_bits(head_1))
 	{
-		j = 0;
-		while (j++ < n)
+		index = 0;
+		while (index++ < n)
 		{
-			if ((((*head_1)->index >> i) & 1) == 1)
+			if ((((*head_1)->index >> bit) & 1) == 1)
 				move_rotate_c(head_1, 'a');
 			else
 				move_push_c(head_2, head_1, 'b');
 		}
 		while (ft_plstsize(*head_2) != 0)
 			move_push_c(head_1, head_2, 'a');
-		i++;
+		bit++;
 	}
 }
 

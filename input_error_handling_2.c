@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:17:02 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/13 21:25:44 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/14 22:27:54 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,16 +64,14 @@ int	check_input_method_2(int n, char **args)
 {
 	int	i;
 	int	err_1;
-	int	err_2;
 	int	err;
 
 	i = 1;
 	err = 0;
 	while (i < n)
 	{
-		err_1 = check_for_not_a_digit(args[i]);
-		err_2 = out_of_range_number(args[i]);
-		err = err + err_1 + err_2;
+		err_1 = check_for_not_a_digit(args[i]) + out_of_range_number(args[i]);
+		err = err + err_1;
 		i++;
 	}
 	err = err + check_for_duplicate(n, args);
@@ -83,11 +81,9 @@ int	check_input_method_2(int n, char **args)
 int	check_input(int argc, char **argv)
 {
 	int		err;
-	int		i;
 	int		res_1;
 	int		res_2;
 
-	i = 1;
 	err = 0;
 	res_1 = 0;
 	res_2 = 0;

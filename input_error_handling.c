@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/13 21:18:32 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/14 22:34:24 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	check_for_not_a_digit(char *s)
 
 int	out_of_range_number(char *s)
 {
-	long long int	c;
+	long int	c;
 
-	c = ft_atoi(s);
-	if (c < -2147483647 || c > 2147483647 || ft_strlen(s) > 11)
+	c = ft_atoli(s);
+	if (c < -2147483648 || c > 2147483647 || ft_strlen(s) > 11)
 		return (1);
 	return (0);
 }
