@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:00:39 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/13 21:20:36 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/15 17:57:14 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "./libft/libft.h"
-# include "./ft_printf/ft_printf.h"
+# include "../libft/libft.h"
+# include "../ft_printf/ft_printf.h"
 
 /* ########################################################################## */
 /* STRUCTURES */

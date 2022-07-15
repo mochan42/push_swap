@@ -6,11 +6,11 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:17:02 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/14 22:27:54 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/15 19:09:01 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 char	**check_input_method_1_prep_argv(char **args)
 {

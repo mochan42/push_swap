@@ -6,11 +6,11 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/14 22:34:24 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/15 19:09:05 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	check_for_not_a_digit(char *s)
 {

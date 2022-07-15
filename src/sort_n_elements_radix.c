@@ -6,11 +6,11 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:07:13 by moninechan        #+#    #+#             */
-/*   Updated: 2022/07/14 22:03:59 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/15 19:09:34 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	*create_index(int *array, int size, t_node *head_1)
 {

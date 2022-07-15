@@ -6,11 +6,11 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/14 22:27:18 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/15 19:09:13 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	main(int argc, char **argv)
 {

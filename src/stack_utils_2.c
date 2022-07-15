@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 17:11:19 by mochan            #+#    #+#             */
-/*   Updated: 2022/06/30 16:57:07 by moninechan       ###   ########.fr       */
+/*   Updated: 2022/07/15 19:09:38 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 t_node	*before_last_node(t_node *node)
 {

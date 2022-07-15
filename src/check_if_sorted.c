@@ -6,11 +6,11 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:35:17 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/08 23:53:51 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/15 19:08:56 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	check_if_sorted(t_node **head_1)
 {
