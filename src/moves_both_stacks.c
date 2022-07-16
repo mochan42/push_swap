@@ -6,12 +6,15 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 16:51:36 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:08 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 10:24:09 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* move_ss:
+*	perform sa and sb simultaneously
+*/
 void	move_ss(t_node **head_1, t_node **head_2)
 {
 	t_node	*p_1;
@@ -35,6 +38,9 @@ void	move_ss(t_node **head_1, t_node **head_2)
 	}
 }
 
+/* move_rr:
+*	perform ra and rb simultaneously
+*/
 void	move_rr(t_node **head_1, t_node **head_2)
 {
 	t_node	*tmp_1;
@@ -54,6 +60,9 @@ void	move_rr(t_node **head_1, t_node **head_2)
 	}
 }
 
+/* move_rrr:
+*	perform rra and rrb simultaneously
+*/
 void	move_rrr(t_node **head_1, t_node **head_2)
 {
 	t_node	*before_last_1;

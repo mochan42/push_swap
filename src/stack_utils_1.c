@@ -6,12 +6,15 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 16:27:00 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:36 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 11:32:29 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* *last_node:
+*	Return the last node of a linked list.
+*/
 t_node	*last_node(t_node *node)
 {
 	if (node == NULL)
@@ -22,6 +25,9 @@ t_node	*last_node(t_node *node)
 		return (last_node(node->next));
 }
 
+/* *new_node:
+*	Create a new node but it is not linked.
+*/
 t_node	*new_node(int value)
 {
 	t_node	*p;
@@ -35,6 +41,9 @@ t_node	*new_node(int value)
 	return (p);
 }
 
+/* *new_node:
+*	Create a new node at the end of the linked list.
+*/
 void	node_add_back(t_node **node, t_node *new)
 {
 	t_node	*p;
@@ -48,6 +57,9 @@ void	node_add_back(t_node **node, t_node *new)
 	}
 }
 
+/* *stack_init:
+*	Store the input parameter of the push_swap program into a linked list.
+*/
 t_node	*stack_init(int argc, char **argv)
 {	
 	int		i;
@@ -73,6 +85,11 @@ t_node	*stack_init(int argc, char **argv)
 	return (head);
 }
 
+/* printlist:
+*	print the values of the nodes of a linked list.
+*	useful function to check if the linked list is created, sorted, etc.
+*	not required for the project.
+*/
 void	printlist(t_node *head)
 {
 	t_node	*temporary;

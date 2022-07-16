@@ -6,12 +6,15 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:41:48 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:05 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 11:21:41 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* check_for_not_a_digit:
+*	Returns 1 if a string contains a character which is not a digit.
+*/
 int	check_for_not_a_digit(char *s)
 {
 	if (*s && (*s == '-' || *s == '+'))
@@ -25,6 +28,11 @@ int	check_for_not_a_digit(char *s)
 	return (0);
 }
 
+/* out_of_range_number:
+*	Returns 1 if a string corresponds to a number which is > MAX INT or < MAX INT.
+*	Note that we need to use a conversion from string to long int (ft_atoli) so
+*	that the comparisons make sense otherwise there is an overflow.
+*/
 int	out_of_range_number(char *s)
 {
 	long int	c;
@@ -35,6 +43,10 @@ int	out_of_range_number(char *s)
 	return (0);
 }
 
+/* check_for_duplicate:
+*	Returns 1 if two same numbers are found.
+*	Free the arrays is mandatory to avoid memory leaks.
+*/
 int	check_for_duplicate(int argc, char **argv)
 {
 	int	*list_of_numbers;
@@ -62,6 +74,9 @@ int	check_for_duplicate(int argc, char **argv)
 	return (b_duplicate);
 }
 
+/* int	count_arguments:
+*	Helper function for check_input_method_1_prep_argc.
+*/
 int	count_arguments(char **arguments)
 {
 	int	counter;
@@ -74,41 +89,3 @@ int	count_arguments(char **arguments)
 	}
 	return (counter);
 }
-
-// int	check_input(int argc, char **argv)
-// {
-// 	int		err;
-// 	int		err_1;
-// 	int		err_2;
-// 	int		i;
-// 	char	*str;
-
-// 	i = 1;
-// 	err = 0;
-// 	if (argc == 1)
-// 		return (0);
-// 	if (argc == 2)
-// 	{
-// 		str = ft_strjoin("!placeholder ", argv[1]);
-// 		argv = ft_split(str, ' ');
-// 		free(str);
-// 		argc = count_arguments(argv);
-// 		while (i < argc)
-// 		{
-// 			err_1 = check_for_not_a_digit(argv[i]);
-// 			err_2 = out_of_range_number(argv[i]);
-// 			err = err + err_1 + err_2;
-// 			i++;
-// 		}
-// 		free_args(argv);
-// 	}
-// 	while (i < argc)
-// 	{
-// 		err_1 = check_for_not_a_digit(argv[i]);
-// 		err_2 = out_of_range_number(argv[i]);
-// 		err = err + err_1 + err_2;
-// 		i++;
-// 	}
-// 	err = err + check_for_duplicate(argc, argv);
-// 	return (err);
-// }

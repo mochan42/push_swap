@@ -6,12 +6,17 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 17:23:26 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:08:37 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 10:36:25 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* sort_2:
+*	sorting method for 2 numbers.
+*	if the 1st number > 2nd number, we just rotate them.
+*	otherwise, the list is already sorted.
+*/
 void	sort_2(t_node **head_1)
 {
 	int	first;

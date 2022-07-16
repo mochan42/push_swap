@@ -6,12 +6,21 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 10:17:46 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:13 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 10:32:44 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* main:
+*	Checks if the input is correct.
+*	Initializes stacks a and b and count number of numbers in stack a.
+*	Check if stack a is sorted.
+*	If not, sort stack a depending on how many elements are in the list:
+*		up to 5 numbers	: sort is hard-coded.
+*		> % numbers		: sort is done with radix algorithm.
+*	Free stacks to avoid memory leaks.
+*/
 int	main(int argc, char **argv)
 {
 	t_node	*head_a;

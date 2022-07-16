@@ -6,12 +6,16 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:17:02 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:01 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 11:22:59 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* check_input_method_1_prep_argv:
+*	Corresponds to the 2nd case.
+*	Split the string into different arguments.
+*/
 char	**check_input_method_1_prep_argv(char **args)
 {
 	char	*str;
@@ -23,6 +27,10 @@ char	**check_input_method_1_prep_argv(char **args)
 	return (argv);
 }
 
+/* check_input_method_1_prep_argc:
+*	Corresponds to the 2nd case.
+*	Count the number of arguments adter the string is split.
+*/
 int	check_input_method_1_prep_argc(char **args)
 {
 	char	*str;
@@ -37,6 +45,12 @@ int	check_input_method_1_prep_argc(char **args)
 	return (argc);
 }
 
+/* check_input_method_1:
+*	Corresponds to the 2nd case.
+*	Each argument of args is checked one by one after being split.
+*	Free the arrays before exiting the function is mandatory to avoid
+*	memory leaks.
+*/
 int	check_input_method_1(char **args)
 {
 	char	**argv;
@@ -60,6 +74,10 @@ int	check_input_method_1(char **args)
 	return (err);
 }
 
+/* check_input_method_2:
+*	Corresponds to the 3rd case.
+*	Each argument of args is checked one by one.
+*/
 int	check_input_method_2(int n, char **args)
 {
 	int	i;
@@ -78,6 +96,15 @@ int	check_input_method_2(int n, char **args)
 	return (err);
 }
 
+/* check_input:
+*	"main" function to handle error input.
+*	3 different cases are identified :
+*		(1) 0 parameter => do nothing
+*		(2) 1 parameter => could be a string containing one number or a string
+*			containing a list of numbers.
+*		(3) more than 1 parameter => it is not a single string containing a
+*			list of numbers, we have a list of strings.
+*/
 int	check_input(int argc, char **argv)
 {
 	int		err;

@@ -6,12 +6,17 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:38:31 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:27 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 11:06:58 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* sort_4_method_1:
+*	Once the minimum number is on top of stack a, push it to stack b.
+*	Sort stack a as a list of 3 numbers.
+*	Push the minimum number back to stack a.
+*/
 void	sort_4_method_1(t_node **head_1, t_node **head_2)
 {
 	move_push_c(head_2, head_1, 'b');
@@ -19,6 +24,11 @@ void	sort_4_method_1(t_node **head_1, t_node **head_2)
 	move_push_c(head_1, head_2, 'a');
 }
 
+/* sort_4:
+*	Sorting method for 4 numbers.
+*	Find the node with the minimum number, put it in the top of stack a.
+*	Then apply the helper function sort_4_method_1.
+*/
 void	sort_4(t_node **head_1, t_node **head_2)
 {
 	t_node	*current;

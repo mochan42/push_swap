@@ -6,12 +6,17 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 09:50:33 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:30 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 11:06:51 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* sort_5_method_1:
+*	Once the minimum number is on top of stack a, push it to stack b.
+*	Sort stack a as a list of 4 numbers.
+*	Push the minimum number back to stack a.
+*/
 void	sort_5_method_1(t_node **head_1, t_node **head_2)
 {
 	move_push_c(head_2, head_1, 'b');
@@ -19,6 +24,13 @@ void	sort_5_method_1(t_node **head_1, t_node **head_2)
 	move_push_c(head_1, head_2, 'a');
 }
 
+/* sort_5_decision:
+*	The minimum number position in stack a is stored with int n.
+*	Depending on n, we decide to rotate or reverse rotate stack to move
+*	the minimum number on top of stack a based on the lowest number of moves
+*	required.
+*	Then we apply helper function sort_5_method_1.
+*/
 void	sort_5_decision(t_node **head_1, t_node **head_2, int n)
 {
 	t_node	*current;
@@ -41,6 +53,11 @@ void	sort_5_decision(t_node **head_1, t_node **head_2, int n)
 	sort_5_method_1(head_1, head_2);
 }
 
+/* sort_5:
+*	Sorting method for 5 numbers.
+*	Find the node with the minimum number and feeds its position
+*	into the helper function sort_5_decision.
+*/
 void	sort_5(t_node **head_1, t_node **head_2)
 {
 	t_node	*current;

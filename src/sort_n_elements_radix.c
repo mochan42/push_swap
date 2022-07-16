@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:07:13 by moninechan        #+#    #+#             */
-/*   Updated: 2022/07/15 19:09:34 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 11:20:27 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,10 @@ void	fill_index(t_node *head_1, int *array)
 	}
 }
 
+/* get_max_bits:
+*	Returns the maximum number of bits in the list of indexes
+*	after being converted into binary base.
+*/
 static int	get_max_bits(t_node **head_1)
 {
 	t_node	*tmp;
@@ -75,6 +79,19 @@ static int	get_max_bits(t_node **head_1)
 	return (max_bits);
 }
 
+/* radix_sort_method_1:
+*	For every bit starting from the least significant one (bit = 0,
+*	on the right end).
+*	For every index in the list of numbers in stack a
+*	Each index is converted to binary and the bit is compared to 1
+*	Every index whose current bit is 0 is pushed to stack b
+*	Every index whose current bit is 1 is kept in stack a
+*	Push back all indexed in stack b back to stack a.
+*	Now, in stack a, all the indexes with bit = 0 are on top of
+*	indexes for with bit =1.
+*	Repeat the process for all the bits, from right (least significant)
+*	to the left (most significant).
+*/
 void	radix_sort_method_1(t_node **head_1, t_node **head_2, int n)
 {
 	int	bit;
@@ -97,6 +114,16 @@ void	radix_sort_method_1(t_node **head_1, t_node **head_2, int n)
 	}
 }
 
+/* radix_sort:
+*	An index is attributed to each node of the linked list.
+*	Radix algorithm will sort the index values rather than the
+*	actual numbers' value.
+*	Malloc an array and create the index for each node.
+*	Copy the index from the array into the index value of each node.
+*	Helper function radix_sort_method_1 will perform the moves to sort
+*	the array.
+*	Free the array that was mallocc'ed to avoid memory leaks.
+*/
 void	radix_sort(t_node **head_1, t_node **head_2)
 {
 	int	size;

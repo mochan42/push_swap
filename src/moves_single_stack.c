@@ -12,6 +12,13 @@
 
 #include "../inc/push_swap.h"
 
+/* move_swap_c:
+*	swap the 2 first nodes of the linked list.
+*	the 2nd argument is for printing on which linked list the operation is
+*	being performed:
+*		c = 'a' for sa
+*		c = 'b' for sb
+*/
 void	move_swap_c(t_node **head, char c)
 {
 	t_node	*p;
@@ -30,6 +37,13 @@ void	move_swap_c(t_node **head, char c)
 	}
 }
 
+/* move_rotate_c:
+*	move the first node of the linked list to the last position.
+*	the 2nd argument is for printing on which linked list the operation is
+*	being performed:
+*		c = 'a' for ra
+*		c = 'b' for rb
+*/
 void	move_rotate_c(t_node **head, char c)
 {
 	t_node	*tmp;
@@ -46,6 +60,13 @@ void	move_rotate_c(t_node **head, char c)
 	}
 }
 
+/* move_reverse_rotate_c:
+*	move the last node of the linked list to the first position.
+*	the 2nd argument is for printing on which linked list the operation is
+*	being performed:
+*		c = 'a' for rra
+*		c = 'b' for rrb
+*/
 void	move_reverse_rotate_c(t_node **head, char c)
 {
 	t_node	*before_last;
@@ -61,6 +82,14 @@ void	move_reverse_rotate_c(t_node **head, char c)
 	}
 }
 
+/* move_push_c:
+*	Move the first node of the linked list "stack_from" to the first position
+*	of the linked list "stack_to".
+*	The 2nd argument is for printing on which linked list the operation is
+*	being performed:
+*		c = 'a' for pa
+*		c = 'b' for pb
+*/
 void	move_push_c(t_node **stack_to, t_node **stack_from, char c)
 {
 	t_node	*tmp;

@@ -6,12 +6,15 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:35:17 by mochan            #+#    #+#             */
-/*   Updated: 2022/07/15 19:08:56 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/16 09:57:49 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* check_if_sorted:
+*		Check if the linked list is sorted or not.
+*/
 int	check_if_sorted(t_node **head_1)
 {
 	t_node	*tmp;
