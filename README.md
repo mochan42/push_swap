@@ -19,9 +19,6 @@ Run the program push_swap by using the script:<br>
 
 The arguments that the push_swap program will take as input can be changed in the script file :<br>
 `my_script.sh`
-<br>
-Tester for:<br>
-  - error management,<br>
-  - identity,<br>
-  - lists of 3, 5, 100 and 500 numbers.<br>
+<br><br>
+Run Tester for: error management / identity / lists of 3, 5, 100 and 500 numbers :<br>
 `bash push_swap_tester.sh`
