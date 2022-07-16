@@ -11,6 +11,9 @@ Clone the repository in your terminal and create a folder named push_swap (or th
 Enter into the directory `push_swap` (or type in the name of the folder you created):<br>
 `cd push_swap`
 
+Run the Makefile:<br>
+`make`
+
 Run the program push_swap by using the script:<br>
 `bash my_script.sh`
 
