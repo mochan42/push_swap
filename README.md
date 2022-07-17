@@ -1,6 +1,7 @@
 # push_swap
 * 42 Core Curriculum - Level 2
 * Level 0 in the Holy Graph<br>
+* Passed with 84% (Mandatory part) on 5th June 2022.<br>
 
 
 ## Use
@@ -17,4 +18,8 @@ Run the Makefile:<br>
 Run the program push_swap by using the script:<br>
 `bash my_script.sh`
 
-The arguments that the push_swap program will take as input can be changed in the script file : `my_script.sh`
+The arguments that the push_swap program will take as input can be changed in the script file :<br>
+`my_script.sh`
+<br><br>
+Run Tester for: error management / identity / lists of 3, 5, 100 and 500 numbers :<br>
+`bash push_swap_tester.sh`
