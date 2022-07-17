@@ -6,12 +6,16 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:07:13 by moninechan        #+#    #+#             */
-/*   Updated: 2022/07/16 11:20:27 by mochan           ###   ########.fr       */
+/*   Updated: 2022/07/17 10:48:41 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
+/* create_index:
+*	Retrieve all the number values of the nodes of stack A into an array.
+*	Use a bubble sort to sort the array by ascending order.
+*/
 int	*create_index(int *array, int size, t_node *head_1)
 {
 	int	i;
@@ -41,6 +45,12 @@ int	*create_index(int *array, int size, t_node *head_1)
 	return (array);
 }
 
+/* fill_index:
+*	For each node of the linked list of stack A, the number value is compared
+*	to the value in each element of the array.
+*	The counter to find the corresponding element in the array is the index,
+*	which is then sent back to the node.
+*/
 void	fill_index(t_node *head_1, int *array)
 {
 	int	i;
