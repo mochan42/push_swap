@@ -1,6 +1,6 @@
 # push_swap
 * 42 Core Curriculum - Level 2
-* Level 0 in the Holy Graph<br>
+* Level 2 in the Holy Graph<br>
 * Passed with 84% (Mandatory part) on 5th June 2022.<br>
 
 
